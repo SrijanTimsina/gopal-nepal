@@ -7,6 +7,7 @@ import { extractTextFromHtml } from '@/lib/blog-utils';
 import { AnimatedLink } from '@/components/ui/animated-link';
 import Link from 'next/link';
 import { ArrowRight, Calendar, User } from 'lucide-react';
+import parse from 'html-react-parser';
 
 export default function BlogCard({
   post,
@@ -65,7 +66,7 @@ export default function BlogCard({
             </h3>
 
             <p className="line-clamp-2 text-sm text-gray-600">
-              {extractTextFromHtml(post.content)}
+              {parse(extractTextFromHtml(post.content))}
             </p>
           </div>
           {post.tags && post.tags.length > 1 && (
