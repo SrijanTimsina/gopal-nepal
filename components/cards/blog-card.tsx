@@ -38,6 +38,7 @@ export default function BlogCard({
                 alt={post.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
             </div>
@@ -66,9 +67,9 @@ export default function BlogCard({
             </h3>
 
             <p
-              className={`line-clamp-2 ${wide && 'md:line-clamp-5'} text-sm text-gray-600`}
+              className={`line-clamp-2 ${wide && 'md:line-clamp-6'} text-sm text-gray-600`}
             >
-              {parse(extractTextFromHtml(post.content))}
+              {parse(extractTextFromHtml(post.content, wide ? 800 : 150))}
             </p>
           </div>
           {post.tags && post.tags.length > 1 && (

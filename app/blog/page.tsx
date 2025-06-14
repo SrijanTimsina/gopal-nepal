@@ -35,7 +35,7 @@ export default async function BlogPage() {
             <Link
               href={`/blog/${post._id}`}
               key={post._id?.toString()}
-              className={` ${index === 0 ? 'md:flex-row' : ''}`}
+              className={` ${index === 0 ? 'md:col-span-3 md:flex-row' : ''}`}
             >
               <BlogCard post={post} wide={index == 0} />
             </Link>
