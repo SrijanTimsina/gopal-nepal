@@ -66,7 +66,7 @@ export default function BlogCard({
             </h3>
 
             <p
-              className={`${wide ? 'line-clamp-5' : 'line-clamp-2'} text-sm text-gray-600`}
+              className={`line-clamp-2 ${wide && 'md:line-clamp-5'} text-sm text-gray-600`}
             >
               {parse(extractTextFromHtml(post.content))}
             </p>
