@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 
 // MongoDB connection
 const uri =
-  'mongodb+srv://dbUser:zki7DC3ruLNn6k8n@cluster0.w9fr6uj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+  'mongodb+srv://srijan:srijan@cluster0.uevfsjx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 if (!uri) {
   console.error('Please set the MONGODB_URI environment variable');
   process.exit(1);
@@ -12,8 +12,8 @@ if (!uri) {
 async function createAdminUser() {
   const adminUser = {
     name: 'Name',
-    email: 'admin@example.com',
-    password: 'password123',
+    email: 'gopal@nepal',
+    password: 'gopalNepal#123@',
     role: 'admin',
   };
 

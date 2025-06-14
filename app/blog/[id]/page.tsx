@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
   if (post) {
     return {
-      title: `${post.author} - ${post.title}`,
+      title: `Gopal Nepal - ${post.title}`,
       description: extractTextFromHtml(post.content),
       openGraph: {
-        title: `${post.author} - ${post.title}`,
+        title: `Gopal Nepal - ${post.title}`,
         description: extractTextFromHtml(post.content),
-        url: `https://ramesh-bista.vercel.app/blog/${post._id}`,
+        url: `https://gopal-nepal.vercel.app/blog/${post._id}`,
         images: [
           {
             url: post.image
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
       },
       twitter: {
         card: 'summary_large_image',
-        title: `${post.author} - ${post.title}`,
+        title: `Gopal Nepal - ${post.title}`,
         description: extractTextFromHtml(post.content),
         images: [
           post.image ? `https://utfs.io/f/${post.image}` : '/og-image.jpg',
