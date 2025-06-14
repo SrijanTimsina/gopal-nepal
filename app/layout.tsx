@@ -16,17 +16,17 @@ export const metadata: Metadata = {
   description: `Gopal Nepal is a dedicated Nepali academic and political activist from Molung Rural Municipality, Okhaldhunga. Born in 1993 (2050 B.S.), he completed his SLC from Baruneshwar Secondary School and pursued higher education at Amrit Campus, Kathmandu, majoring in Computer Science and Information Technology. He has served in various leadership roles within the ANNFSU, including Campus Committee Secretary, and contributed to student publications and movements. He co-published Nepal's first CSIT entrance preparation book through Ascol Creative Group. Gopal holds an LLB from Nepal Law Campus and a Master's in Political Science from Tribhuvan University. He is currently pursuing an MIT at Central Campus, Kirtipur, and is actively involved in politics as a permanent committee member of ANNFSU, head of the Legal and Federal Affairs Department, and district committee member of CPN-UML, Okhaldhunga. He has over 4.5 years of experience as an IT and Information Officer in Molung Rural Municipality and serves as secretary of the Guru Luintel Study and Development Center.`,
   openGraph: {
     type: 'website',
-    title: 'Name',
+    title: 'Advocate Gopal Nepal',
     description:
       'Advocate Gopal Nepal is a legal professional, political activist, and IT expert from Nepal with a strong background in law, political science, and technology, currently pursuing an MIT and actively engaged in public service and youth leadership.',
-    url: 'https://landing-site.vercel.app/',
+    url: 'https://gopal-nepal.vercel.app/',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Name' }],
-    siteName: 'Name',
+    siteName: 'Advocate Gopal Nepal',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Name',
+    title: 'Advocate Gopal Nepal',
     description:
       'Advocate Gopal Nepal is a legal professional, political activist, and IT expert from Nepal with a strong background in law, political science, and technology, currently pursuing an MIT and actively engaged in public service and youth leadership.',
     images: ['/og-image.jpg'],
