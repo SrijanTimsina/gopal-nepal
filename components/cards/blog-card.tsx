@@ -31,7 +31,8 @@ export default function BlogCard({
             )}
 
             <div
-              className={`relative h-48 ${wide ? 'h-48 md:h-80' : 'h-48'} overflow-hidden`}
+              className="relative overflow-hidden bg-gray-100"
+              style={{ aspectRatio: '1.91 / 1' }}
             >
               <Image
                 src={`https://utfs.io/f/${post.image}` || '/placeholder.svg'}
@@ -39,6 +40,7 @@ export default function BlogCard({
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                 priority
+                sizes={wide ? '(max-width: 768px) 100vw, 50vw' : '100vw'}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
             </div>
