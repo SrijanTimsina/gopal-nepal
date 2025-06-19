@@ -104,7 +104,7 @@ export default function CreateBlogPost() {
             <CardTitle>Blog Post Details</CardTitle>
             <div className="flex items-center space-x-2">
               <Label htmlFor="publish-switch" className="text-sm text-white">
-                {status === 'published' ? 'Published' : 'Draft'}
+                Draft
               </Label>
               <Switch
                 id="publish-switch"
@@ -113,6 +113,9 @@ export default function CreateBlogPost() {
                   setStatus(checked ? 'published' : 'draft')
                 }
               />
+              <Label htmlFor="publish-switch" className="text-sm text-white">
+                Publish
+              </Label>
             </div>
           </div>
         </CardHeader>

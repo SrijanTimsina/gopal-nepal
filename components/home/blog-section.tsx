@@ -44,7 +44,7 @@ export default async function BlogSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 items-start justify-start gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 items-start justify-start gap-8 md:grid-cols-2 xl:grid-cols-3">
           {posts &&
             posts.length > 0 &&
             posts.map((post) => (

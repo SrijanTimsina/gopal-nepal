@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://gopal-nepal.vercel.app
+
+# Sitemaps
+Sitemap: https://gopal-nepal.vercel.app/sitemap.xml

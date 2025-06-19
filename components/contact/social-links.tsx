@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
-import { FiFacebook, FiInstagram, FiLinkedin } from 'react-icons/fi';
+import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
 
 export default function socialLinks({ className }: { className?: string }) {
   return (
     <div className={`flex space-x-3 ${className}`}>
       <Link
-        href="https://www.facebook.com/srijan.timsina"
+        href="https://www.facebook.com/meet2gopal"
         target="_blank"
         className="transform rounded-full bg-white/10 p-2.5 transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-lg hover:shadow-primary/20"
         aria-label="Facebook"
@@ -14,7 +14,7 @@ export default function socialLinks({ className }: { className?: string }) {
         <FiFacebook className="h-5 w-5" />
       </Link>
       <Link
-        href="https://www.instagram.com/srijantimsina_"
+        href="https://www.instagram.com/gopalnepal_"
         target="_blank"
         className="transform rounded-full bg-white/10 p-2.5 transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-lg hover:shadow-primary/20"
         aria-label="Instagram"
@@ -23,12 +23,12 @@ export default function socialLinks({ className }: { className?: string }) {
       </Link>
 
       <Link
-        href="https://www.linkedin.com/in/srijan-timsina-13b516226/"
+        href="https://x.com/meet2gopal"
         target="_blank"
         className="transform rounded-full bg-white/10 p-2.5 transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-lg hover:shadow-primary/20"
-        aria-label="LinkedIn"
+        aria-label="Twitter"
       >
-        <FiLinkedin className="h-5 w-5" />
+        <FiTwitter className="h-5 w-5" />
       </Link>
     </div>
   );

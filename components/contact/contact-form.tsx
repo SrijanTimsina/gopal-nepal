@@ -26,6 +26,7 @@ import {
   Phone,
 } from 'lucide-react';
 import SocialLinks from './social-links';
+import Link from 'next/link';
 
 // Define the form schema with validation
 const formSchema = z.object({
@@ -125,21 +126,28 @@ export default function ContactForm({
                       </div>
                       <div>
                         <h3 className="font-medium text-primary">Email</h3>
-                        <p className="text-white/80">email@gmail.com</p>
+
+                        <Link
+                          href="mailto:gnepal41@gmail.com"
+                          className="text-white/80 transition-all duration-300 hover:text-white"
+                        >
+                          gnepal41@gmail.com
+                        </Link>
                       </div>
                     </div>
 
                     <div className="flex items-start space-x-4">
                       <div className="bg-navy-light rounded-full p-3">
-                        <User className="h-5 w-5 text-primary" />
+                        <Phone className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-medium text-primary">Office</h3>
-                        <p className="text-white/80">
-                          Baneshwor
-                          <br />
-                          Baneshwor-9, Kathmandu, Nepal
-                        </p>
+                        <h3 className="font-medium text-primary">Contact</h3>
+                        <Link
+                          href="tel:+977-9849665172"
+                          className="text-white/80 transition-all duration-300 hover:text-white"
+                        >
+                          9849665172
+                        </Link>
                       </div>
                     </div>
 

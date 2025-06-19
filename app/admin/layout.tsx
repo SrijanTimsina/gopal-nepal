@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import type React from "react";
+import type React from 'react';
 
-import { useSession } from "next-auth/react";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useSession } from 'next-auth/react';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function AdminLayout({
   children,
@@ -16,14 +16,17 @@ export default function AdminLayout({
   const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname === "/admin/login") return;
+    if (pathname === '/admin/login') {
+      if (status === 'authenticated') router.push('/admin');
+      return;
+    }
 
-    if (status === "unauthenticated") {
-      router.push("/admin/login");
+    if (status === 'unauthenticated') {
+      router.push('/admin/login');
     }
   }, [status, router, pathname]);
 
-  if (status === "loading") {
+  if (status === 'loading') {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
@@ -34,7 +37,7 @@ export default function AdminLayout({
     );
   }
 
-  return pathname === "/admin/login" || status === "authenticated" ? (
+  return pathname === '/admin/login' || status === 'authenticated' ? (
     <div className="min-h-screen bg-gray-50">{children}</div>
   ) : null;
 }

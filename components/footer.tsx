@@ -14,13 +14,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-16">
           <div className="space-y-6">
             <div className="mb-2">
-              <h3 className="header-font text-4xl font-bold">Name</h3>
+              <h3 className="header-font text-4xl font-bold">गाेपाल नेपाल</h3>
               <div className="mt-2 h-1 w-16 rounded-full bg-primary/60"></div>
             </div>
 
             <p className="text-lg leading-relaxed text-white/80">
-              Dedicated to creating positive change through innovative
-              leadership, educational excellence, and community engagement.
+              सत्य पाउन भन्दा लाखौं गुणा बढी जोगाउन मुस्किल छ ।
             </p>
 
             <SocialLinks />
@@ -113,34 +112,35 @@ export default function Footer() {
                 Contact Information
               </h3>
               <ul className="space-y-6">
-                <li className="group flex items-start">
+                <li className="group flex items-center">
                   <div className="mr-4 mt-1 flex-shrink-0 rounded-full bg-white/10 p-2 transition-all duration-300 group-hover:bg-primary/20">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
-                  <div className="text-white/80 transition-all duration-300 group-hover:text-white">
-                    Baneshwor
-                    <br />
-                    Baneshwor-9, Kathmandu, Nepal
-                  </div>
+                  <p className="text-white/80 transition-all duration-300 group-hover:text-white">
+                    मोलुङ गाउँपालिका ओखलढुंगा
+                  </p>
                 </li>
                 <li className="group flex items-center">
                   <div className="mr-4 flex-shrink-0 rounded-full bg-white/10 p-2 transition-all duration-300 group-hover:bg-primary/20">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
-                  <span className="text-white/80 transition-all duration-300 group-hover:text-white">
-                    (123) 456-7890
-                  </span>
+                  <Link
+                    href="tel:+977-9849665172"
+                    className="text-white/80 transition-all duration-300 group-hover:text-white"
+                  >
+                    9849665172
+                  </Link>
                 </li>
                 <li className="group flex items-center">
                   <div className="mr-4 flex-shrink-0 rounded-full bg-white/10 p-2 transition-all duration-300 group-hover:bg-primary/20">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
-                  <a
-                    href="mailto:email@gmail.com"
-                    className="text-white/80 transition-all duration-300 hover:text-primary"
+                  <Link
+                    href="mailto:gnepal41@gmail.com"
+                    className="text-white/80 transition-all duration-300 group-hover:text-white"
                   >
-                    email@gmail.com
-                  </a>
+                    gnepal41@gmail.com
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -151,7 +151,7 @@ export default function Footer() {
       <div className="relative z-10 border-t border-white/10 bg-navy/80 py-6 backdrop-blur-sm">
         <div className="container mx-auto flex flex-col items-center justify-between px-4 md:flex-row">
           <div className="mb-4 text-sm text-white/60 md:mb-0">
-            &copy; {currentYear} Name. All rights reserved.
+            &copy; {currentYear} Gopal Nepal. All rights reserved.
           </div>
         </div>
       </div>

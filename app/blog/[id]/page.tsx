@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
   if (post) {
     return {
-      title: `Gopal Nepal - ${post.title}`,
+      title: `${post.title} - Advocate Gopal Nepal`,
       description: parse(extractTextFromHtml(post.content)),
       openGraph: {
-        title: `Gopal Nepal - ${post.title}`,
+        title: `${post.title} - Advocate Gopal Nepal`,
         description: parse(extractTextFromHtml(post.content)),
         url: `https://gopal-nepal.vercel.app/blog/${post._id}`,
         images: [
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
       },
       twitter: {
         card: 'summary_large_image',
-        title: `Gopal Nepal - ${post.title}`,
+        title: `${post.title} - Advocate Gopal Nepal`,
         description: parse(extractTextFromHtml(post.content)),
         images: [
           post.image ? `https://utfs.io/f/${post.image}` : '/og-image.jpg',

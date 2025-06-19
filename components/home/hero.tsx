@@ -20,16 +20,17 @@ export default function Hero() {
           </div>
           <div className="flex flex-col items-center space-y-6 md:mt-8">
             <div className="space-y-6">
-              <h1 className="text-xl font-bold leading-tight text-primary/80 md:text-2xl lg:text-3xl">
+              <p className="text-xl font-bold leading-tight text-primary/80 md:text-2xl lg:text-3xl">
                 नमस्कार
-              </h1>
-              <h1 className="text-5xl font-bold leading-tight text-navy md:text-6xl lg:text-7xl">
-                गाेपाल नेपाल
-              </h1>
-
-              <p className="max-w-lg text-base text-gray-700 sm:text-lg">
-                सत्य पाउन भन्दा लाखौं गुणा बढी जोगाउन मुस्किल छ ।
               </p>
+              <h3 className="text-5xl font-bold leading-tight text-navy md:text-6xl lg:text-7xl">
+                गाेपाल नेपाल
+              </h3>
+              <h1 className="sr-only">Gopal Nepal</h1>
+
+              <h2 className="max-w-lg text-base text-gray-700 sm:text-lg">
+                सत्य पाउन भन्दा लाखौं गुणा बढी जोगाउन मुस्किल छ ।
+              </h2>
             </div>
             <div className="flex flex-row justify-center gap-4 pt-4 md:justify-start">
               <Link href="/blog">

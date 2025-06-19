@@ -1,36 +1,38 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 
 const dummyImages = [
   {
-    _id: "1",
-    title: "Education Summit 2023",
-    description: "Keynote speech at the annual Education Summit",
-    imageUrl: "/image-1.jpg",
-    categoryName: "Events",
+    _id: '1',
+    title:
+      'सुवासचन्द्र नेम्वाङ स्मृती अभ्यास अदालत(Moot Court) प्रतियोगिता २०८१',
+    description:
+      'सुवासचन्द्र नेम्वाङ स्मृती अभ्यास अदालत(Moot Court) प्रतियोगिता २०८१',
+    imageUrl: '/home.jpg',
+    categoryName: 'Events',
   },
   {
-    _id: "2",
-    title: "Community Outreach Program",
-    description: "Engaging with local community members",
-    imageUrl: "/image-1.jpg",
-    categoryName: "Community",
+    _id: '2',
+    title: 'अनेरास्ववियु २४औ राष्ट्रिय महाधिवेशन',
+    description: 'अनेरास्ववियु २४औ राष्ट्रिय महाधिवेशन',
+    imageUrl: '/gallery-2.jpg',
+    categoryName: 'Community',
   },
   {
-    _id: "3",
-    title: "Leadership Workshop",
-    description: "Conducting a workshop for emerging leaders",
-    imageUrl: "/image-1.jpg",
-    categoryName: "Workshops",
+    _id: '4',
+    title: 'Gopal Nepal',
+    description: 'Gopal Nepal',
+    imageUrl: '/about.webp',
+    categoryName: 'Education',
   },
   {
-    _id: "4",
-    title: "Campus Innovation Center Opening",
-    description: "Ribbon cutting ceremony for the new innovation center",
-    imageUrl: "/image-1.jpg",
-    categoryName: "Education",
+    _id: '3',
+    title: 'अनेरास्ववियु २४ औ राष्ट्रिय महाधिवेशन',
+    description: 'अनेरास्ववियु २४औ राष्ट्रिय महाधिवेशन',
+    imageUrl: '/gallery-2.jpg',
+    categoryName: 'Community',
   },
 ];
 
@@ -58,8 +60,8 @@ export default function GallerySection() {
           <Link
             key={image._id}
             href="/gallery"
-            className={`group relative overflow-hidden rounded-xl ${index === 0 ? "col-span-2 row-span-2" : ""} ${
-              index === 3 ? "col-span-2 hidden md:block" : ""
+            className={`group relative overflow-hidden rounded-xl ${index === 0 ? 'col-span-2 row-span-2' : ''} ${
+              index === 3 ? 'col-span-2 hidden md:block' : ''
             }`}
           >
             {index !== 1 && index !== 2 && (
@@ -89,10 +91,10 @@ export default function GallerySection() {
             )}
 
             <div
-              className={`relative w-full ${index === 0 ? "aspect-square md:aspect-[4/4.6]" : "aspect-square md:aspect-[4/3]"}`}
+              className={`relative w-full ${index === 0 ? 'aspect-square md:aspect-[4/4.6]' : 'aspect-square md:aspect-[4/3]'}`}
             >
               <Image
-                src={image.imageUrl || "/placeholder.svg"}
+                src={image.imageUrl || '/placeholder.svg'}
                 alt={image.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"

@@ -8,12 +8,15 @@ import NextAuthSessionProvider from '@/components/providers/session-provider';
 import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin';
 import { extractRouterConfig } from 'uploadthing/server';
 import { ourFileRouter } from '@/app/api/uploadthing/core';
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Advocate Gopal Nepal',
   description: `Gopal Nepal is a dedicated Nepali academic and political activist from Molung Rural Municipality, Okhaldhunga. Born in 1993 (2050 B.S.), he completed his SLC from Baruneshwar Secondary School and pursued higher education at Amrit Campus, Kathmandu, majoring in Computer Science and Information Technology. He has served in various leadership roles within the ANNFSU, including Campus Committee Secretary, and contributed to student publications and movements. He co-published Nepal's first CSIT entrance preparation book through Ascol Creative Group. Gopal holds an LLB from Nepal Law Campus and a Master's in Political Science from Tribhuvan University. He is currently pursuing an MIT at Central Campus, Kirtipur, and is actively involved in politics as a permanent committee member of ANNFSU, head of the Legal and Federal Affairs Department, and district committee member of CPN-UML, Okhaldhunga. He has over 4.5 years of experience as an IT and Information Officer in Molung Rural Municipality and serves as secretary of the Guru Luintel Study and Development Center.`,
+  keywords:
+    'advocate, lawyer in Nepal, legal consultant, best advocate in nepal, attorney, legal advice nepal, gopal nepal, best lawyer in nepal, criminal lawyer nepal, civil lawyer nepal',
   openGraph: {
     type: 'website',
     title: 'Advocate Gopal Nepal',
@@ -40,8 +43,36 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Gopal Nepal',
+    jobTitle: 'Advocate',
+    description:
+      'Advocate Gopal Nepal is a legal professional, political activist, and IT expert from Nepal with expertise in civil, criminal, and corporate law.',
+    url: 'https://gopal-nepal.vercel.app/',
+    image: 'https://gopal-nepal.vercel.app/og-image.jpg',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'NP',
+      addressLocality: 'Okhaldhunga',
+      addressRegion: 'Province 1',
+    },
+    sameAs: [
+      'https://www.facebook.com/meet2gopal',
+      'https://www.instagram.com/gopalnepal_',
+      'https://x.com/meet2gopal',
+    ],
+  };
+
   return (
     <html lang="en">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
       <body className={`bg-navy ${inter.className}`}>
         <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
         <NextAuthSessionProvider>
